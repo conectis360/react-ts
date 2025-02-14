@@ -8,3 +8,8 @@ let userAgeType :number = 34;
 
 let isValid = true;
 let isValidType :boolean = false;
+
+let userId: string | number = 'abc1';
+userId = 123;
+
+//estamos dizendo que ele é explicitamente string ou numero, então podemos alterar entre os tipos para darmos alternativas pro typescript
