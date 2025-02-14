@@ -14,7 +14,12 @@ userId = 123;
 
 //estamos dizendo que ele é explicitamente string ou numero, então podemos alterar entre os tipos para darmos alternativas pro typescript
 
-let user: object;
+let user: {
+    name: string;
+    age: number;
+    isAdmin: boolean;
+    id: string | number;
+};
 
 user = {
     name: 'max',
