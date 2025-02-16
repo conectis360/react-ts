@@ -49,3 +49,15 @@ type add = (a: number, b: number) => number;
 function calculate(a: number, b:number, add:add) { //podemos receber uma função como parametro em outra função podendo declarar o type assim
     return a / b;
 }
+
+interface Credentials { // interface é basicamente uma forma de criar types para objetos
+    password: string;
+    username: string;
+}
+
+let creds: Credentials;
+
+creds = {
+    password: 't#sT3',
+    username: 'admin'
+}
