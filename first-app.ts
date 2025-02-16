@@ -61,3 +61,42 @@ creds = {
     password: 't#sT3',
     username: 'admin'
 }
+
+class AuthCredentials implements Credentials {
+    email: string;
+    password: string;
+    username: string;
+}
+
+//podemos usar interfaces como contratos, iguais em qualquer OOP
+
+function login(credentials: Credentials) {
+
+}
+
+login(new AuthCredentials())
+
+login(creds)
+
+//as duas versões são uteis
+/*
+type Admin = {
+    permissions: string[]
+};
+
+
+type AppUser = {
+    userName: string;
+}*/
+
+//type AppAdmin = Admin & AppUser;
+
+interface Admin {
+    permissions: string[];
+}
+
+interface AppUser {
+    userName: string;
+}
+
+interface AppAdmin extends Admin, AppUser {}
