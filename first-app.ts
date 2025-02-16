@@ -100,3 +100,17 @@ interface AppUser {
 }
 
 interface AppAdmin extends Admin, AppUser {}
+
+type Role = 'admin' | 'user' | 'editor';
+
+let role: Role; // 'admin', 'user', 'editor ao dizer : 'admin' estou dizendo que o tipo é especifico 'admin'
+
+role = 'admin';
+role = 'user';
+role = 'editor';
+
+function performAction(action: string | number, role: Role) {
+    if(role === 'admin' && typeof action === 'string') {
+        //... só executa se for admin, esse padrão é chamado de Type Guards
+    }
+}
