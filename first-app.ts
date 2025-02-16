@@ -32,6 +32,14 @@ function add(a: number, b:number) { //podemos usar todos tipos e fazer as funç�
     return a + b;
 }
 
-function minus(a: number, b:number): undefined { //podemos usar todos tipos e fazer as funções mais type safe
+function minus(a: number, b:number): void { //setamos o retorno da função para void, já que não retorna nada
     a - b;
+}
+
+function multiply(a: number, b:number): number { //setamos o retorno da função para number
+    return a * b;
+}
+
+function divide(a: number, b:number) { //entretanto não o fazemos, permitindo que o typescript infira o tipo de retorno ele mesmo
+    return a / b;
 }
