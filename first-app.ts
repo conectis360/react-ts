@@ -43,3 +43,7 @@ function multiply(a: number, b:number): number { //setamos o retorno da função
 function divide(a: number, b:number) { //entretanto não o fazemos, permitindo que o typescript infira o tipo de retorno ele mesmo
     return a / b;
 }
+
+function calculate(a: number, b:number, add:(a: number, b: number) => number) { //podemos receber uma função como parametro em outra função podendo declarar o type assim
+    return a / b;
+}
