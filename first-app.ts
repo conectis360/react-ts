@@ -44,6 +44,8 @@ function divide(a: number, b:number) { //entretanto não o fazemos, permitindo q
     return a / b;
 }
 
-function calculate(a: number, b:number, add:(a: number, b: number) => number) { //podemos receber uma função como parametro em outra função podendo declarar o type assim
+type add = (a: number, b: number) => number;
+
+function calculate(a: number, b:number, add:add) { //podemos receber uma função como parametro em outra função podendo declarar o type assim
     return a / b;
 }
