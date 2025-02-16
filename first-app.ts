@@ -122,3 +122,38 @@ function combine(a: number | string, b: number | string) {
    
     return `${a} ${b}`;
   }
+
+  //generic type feature
+
+  let roles: Array<Role>;
+  roles = ['admin', 'editor'];
+
+  //podemos criar nossos próprios tipos genericos
+
+  type DataStorage<T> = { // T para Type
+    storage: T[];
+    add: (data: T) => void;
+  }
+
+  const textStorage: DataStorage<string> = {
+    storage: [],
+    add(data){
+        this.storage.push(data);
+    }
+  }
+
+  const userStorage: DataStorage<User> = {
+    storage: [],
+    add(user){}
+  }
+
+  function merge<T, U>(a: T, b:U) {
+    return {
+        ...a,
+        ...b
+    };
+  }
+
+  const newUser = merge<{name: string}, {age: number}>({name: 'Max'}, {age: 10});
+
+  newUser.age;
