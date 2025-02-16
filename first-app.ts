@@ -27,3 +27,11 @@ user = {
     isAdmin: true,
     id: 'abc'
 };
+
+function add(a: number, b:number) { //podemos usar todos tipos e fazer as funções mais type safe
+    return a + b;
+}
+
+function minus(a: number, b:number): undefined { //podemos usar todos tipos e fazer as funções mais type safe
+    a - b;
+}
